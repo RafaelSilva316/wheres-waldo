@@ -1,0 +1,14 @@
+.App {
+  width: 87%;
+  position: absolute;
+  right: 0;
+  top: 7.6rem;
+  bottom: 0;
+  background-color: rgb(221, 167, 167);
+}
+
+.img-box {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

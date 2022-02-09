@@ -1,0 +1,27 @@
+.Navbar {
+  background-color: rgb(158, 65, 65);
+  padding: 2rem;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Navlink {
+  border: none;
+  text-decoration: none;
+  color: rgb(243, 237, 237);
+  padding: 0.4rem 1.6rem;
+  border-radius: 5px;
+}
+
+.Navlink:hover {
+  color: #fff;
+  background-color: rgb(182, 91, 91);
+}
+
+.Navlink:active {
+  color: rgb(211, 205, 205);
+  background-color: rgb(141, 69, 69);
+}

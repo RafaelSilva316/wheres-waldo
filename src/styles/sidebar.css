@@ -1,0 +1,8 @@
+.Sidebar {
+  background-color: rgb(165, 133, 133);
+  position: absolute;
+  left: 0;
+  top: 7.6rem;
+  bottom: 0;
+  width: 13%;
+}

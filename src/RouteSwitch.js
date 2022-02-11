@@ -6,12 +6,32 @@ import App from "./App";
 import HighScores from "./components/HighScores";
 
 const RouteSwitch = () => {
+  const [menuItemActive, setMenuItemActive] = useState({
+    Waldo: true,
+    Wizard: true,
+    Odlaw: true,
+  });
+
+  const updateMenuItem = (e) => {
+    const prevMenuActive = { ...menuItemActive };
+    prevMenuActive[e.target.innerText] = false;
+    setMenuItemActive(prevMenuActive);
+  };
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar></Navbar>
-      <Sidebar></Sidebar>
+      <Sidebar menuItemActive={menuItemActive}></Sidebar>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route
+          path="/"
+          element={
+            <App
+              menuItemActive={menuItemActive}
+              updateMenuItem={updateMenuItem}
+            />
+          }
+        />
         <Route path="/highscores" element={<HighScores />} />
       </Routes>
     </BrowserRouter>

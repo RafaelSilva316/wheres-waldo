@@ -6,3 +6,23 @@
   bottom: 0;
   width: 13%;
 }
+
+.char-list {
+  margin-top: 5rem;
+}
+
+.char-list-item {
+  font-size: 2.4rem;
+  color: rgb(252, 238, 239);
+  text-align: center;
+  list-style: none;
+  margin-bottom: 2.4rem;
+}
+
+.char-list-item img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}

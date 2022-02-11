@@ -12,3 +12,46 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.App img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cursorRect {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  /* background-color: red; */
+  border: 0.7rem solid rgba(200, 200, 200, 0.9);
+}
+
+.CharMenu {
+  height: 11rem;
+  width: 7.5rem;
+  position: absolute;
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+
+/* .Charmenu ul {
+  list-style: none;
+} */
+
+.CharMenu li {
+  list-style: none;
+  padding: 1rem;
+  border-bottom: 0.5px solid rgba(200, 200, 200, 0.9);
+  color: #777;
+}
+
+.CharMenu li:hover {
+  background-color: #bbb;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* .charlist-container {
+  display: none;
+} */

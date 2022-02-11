@@ -28,7 +28,7 @@ function App(props) {
     Odlaw: { px: 0.185, py: 0.573 },
   };
 
-  const checkTarget = (e) => {
+  const checkTarget = (e, cb) => {
     const targetPos = propPositions[e.target.innerText];
     if (
       Math.abs(targetPos.px - propMousePos.px) < 0.05 &&
@@ -37,6 +37,7 @@ function App(props) {
       props.updateMenuItem(e);
     }
     toggleCharList();
+    cb();
   };
 
   return (
@@ -60,6 +61,7 @@ function App(props) {
         <CharMenu
           activeItems={props.menuItemActive}
           checkTarget={checkTarget}
+          checkIfFinished={props.checkIfFinished}
           x={mousePos.x}
           y={mousePos.y}
         />

@@ -6,6 +6,7 @@
   height: 100vh;
   top: 0;
   left: 0;
+  font-size: 1.8rem;
 }
 
 .box {
@@ -22,18 +23,45 @@
   overflow: auto;
 }
 
-.close-icon {
-  content: "x";
+.popup-heading {
+  margin-bottom: 6.2rem;
+}
+
+.box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.box label {
+  margin-bottom: 1rem;
+}
+
+.box form input {
+  margin-bottom: 6.4rem;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+}
+
+.form-btn {
+  padding: 1.4rem 0.8rem;
+  margin: 0 2.4rem;
+  background-color: rgb(158, 65, 65);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-btn:hover {
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  position: fixed;
-  right: calc(15% - 30px);
-  top: calc(100vh - 85vh - 33px);
-  background: #ededed;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  line-height: 20px;
-  text-align: center;
-  border: 1px solid #999;
-  font-size: 20px;
+  background-color: rgb(160, 75, 75);
+}
+
+.form-btn:active {
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0);
+  background-color: rgb(185, 76, 76);
 }

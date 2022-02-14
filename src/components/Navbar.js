@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/navbar.css";
-import Timer from "./Timer";
 
 function Navbar(props) {
   const [timerActive, setTimerActive] = useState(true);
 
-  if (props.gameOver) {
-    setTimerActive(false);
-  }
+  useEffect(() => {
+    if (props.gameOver) {
+      setTimerActive(false);
+    }
+  }, [props.gameOver]);
 
   function toggleTimerActive(boolValue) {
     if (!props.gameOver) {
@@ -32,7 +33,8 @@ function Navbar(props) {
       >
         Home
       </NavLink>
-      {timerActive ? <Timer getSessionStorage={props.getSessionStorage} /> : ""}
+
+      <p className="timer">{timerActive ? props.time : ""}</p>
       <NavLink
         onClick={() => {
           toggleTimerActive(false);

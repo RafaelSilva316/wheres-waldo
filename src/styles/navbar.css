@@ -25,3 +25,8 @@
   color: rgb(211, 205, 205);
   background-color: rgb(141, 69, 69);
 }
+
+.timer {
+  color: rgb(250, 232, 232);
+  font-size: 3.2rem;
+}

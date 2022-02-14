@@ -2,12 +2,18 @@ import "./styles/app.css";
 import wheresWaldoImg from "./img/search-waldo.jpg";
 import { useState } from "react";
 import CharMenu from "./components/CharMenu";
+import Popup from "./components/Popup";
 
 function App(props) {
   const [background, setBackground] = useState(wheresWaldoImg);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [propMousePos, setpropMousePos] = useState({ px: 0, py: 0 });
   const [charListActive, setCharListActive] = useState(false);
+  const [popupActive, setPopupActive] = useState(true);
+
+  const togglePopup = () => {
+    setPopupActive(!popupActive);
+  };
 
   const toggleCharList = () => {
     const newActive = !charListActive;
@@ -28,7 +34,7 @@ function App(props) {
     Odlaw: { px: 0.185, py: 0.573 },
   };
 
-  const checkTarget = (e, cb) => {
+  const checkTarget = (e) => {
     const targetPos = propPositions[e.target.innerText];
     if (
       Math.abs(targetPos.px - propMousePos.px) < 0.05 &&
@@ -37,7 +43,6 @@ function App(props) {
       props.updateMenuItem(e);
     }
     toggleCharList();
-    cb();
   };
 
   return (
@@ -66,6 +71,13 @@ function App(props) {
           y={mousePos.y}
         />
       </div>
+      {popupActive && props.gameOver && (
+        <Popup
+          addScoreToDb={props.addScoreToDb}
+          time={props.time}
+          handleClose={togglePopup}
+        />
+      )}
     </div>
   );
 }

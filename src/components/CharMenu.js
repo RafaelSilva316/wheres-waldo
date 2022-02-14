@@ -15,9 +15,7 @@ function CharMenu(props) {
         <li
           style={styler("Waldo")}
           onClick={(e) => {
-            props.checkTarget(e, () => {
-              props.checkIfFinished();
-            });
+            props.checkTarget(e);
           }}
         >
           Waldo
@@ -25,9 +23,7 @@ function CharMenu(props) {
         <li
           style={styler("Wizard")}
           onClick={(e) => {
-            props.checkTarget(e, () => {
-              props.checkIfFinished();
-            });
+            props.checkTarget(e);
           }}
         >
           Wizard
@@ -35,9 +31,7 @@ function CharMenu(props) {
         <li
           style={styler("Odlaw")}
           onClick={(e) => {
-            props.checkTarget(e, () => {
-              props.checkIfFinished();
-            });
+            props.checkTarget(e);
           }}
         >
           Odlaw
